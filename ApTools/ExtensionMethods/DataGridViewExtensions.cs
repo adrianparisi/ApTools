@@ -11,19 +11,24 @@ namespace ApTools
         public static void HideEmptyColumns(this DataGridView grid)
         {
             foreach (DataGridViewColumn column in grid.Columns)
-                if (DataGridViewExtensions.IsEmptyColumn(grid, column.Index))
-                    grid.Columns[column.Index].Visible = false;
+                if (column.IsEmpty())
+                    column.Visible = false;
         }
 
-        private static bool IsEmptyColumn(DataGridView grid, int index)
+        /// <summary>
+        /// Determines whether is an empty column.
+        /// </summary>
+        public static bool IsEmpty(this DataGridViewColumn column)
         {
-            foreach (DataGridViewRow row in grid.Rows)
-                if (row.Cells[index].Value == null ||
-                    row.Cells[index].Value.ToString() == String.Empty ||
-                    row.Cells[index].IsDefaultDate())
-                    return true;
+            foreach (DataGridViewRow row in column.DataGridView.Rows)
+            {
+                object cell = row.Cells[column.Index].Value;
 
-            return false;
+                if (cell != null && cell.ToString() != String.Empty)
+                    return false;
+            }
+
+            return true;
         }
 
         public static bool IsDefaultDate(this DataGridViewCell cell)
