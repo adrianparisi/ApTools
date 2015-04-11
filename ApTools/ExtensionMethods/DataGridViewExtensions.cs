@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ApTools
+namespace SomeTools
 {
     public static class DataGridViewExtensions
     {

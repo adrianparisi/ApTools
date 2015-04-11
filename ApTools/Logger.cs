@@ -2,7 +2,7 @@
 using System.IO;
 using System.Windows.Forms;
 
-namespace ApTools
+namespace SomeTools
 {
     public class Logger
     {

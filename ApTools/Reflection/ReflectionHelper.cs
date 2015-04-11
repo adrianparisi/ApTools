@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace ApTools.Reflection
+namespace SomeTools.Reflection
 {
     public class ReflectionHelper
     {

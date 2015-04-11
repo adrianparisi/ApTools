@@ -2,7 +2,7 @@
 using System.Drawing.Imaging;
 using System.IO;
 
-namespace ApTools
+namespace SomeTools
 {
     public static class ImageExtensions
     {

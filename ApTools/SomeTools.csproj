@@ -7,7 +7,7 @@
     <ProjectGuid>{BE4C2B47-634A-481B-A513-0647F1135B8C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ApTools</RootNamespace>
+    <RootNamespace>SomeTools</RootNamespace>
     <AssemblyName>ApTools</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

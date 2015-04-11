@@ -6,7 +6,7 @@
     <ProjectGuid>{7920498F-E447-4875-B6FC-3D4517CB692C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ApTools.Tests</RootNamespace>
+    <RootNamespace>SomeTools.Tests</RootNamespace>
     <AssemblyName>ApTools.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -62,9 +62,9 @@
     <Compile Include="StringExtensionsTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ApTools\ApTools.csproj">
+    <ProjectReference Include="..\ApTools\SomeTools.csproj">
       <Project>{be4c2b47-634a-481b-a513-0647f1135b8c}</Project>
-      <Name>ApTools</Name>
+      <Name>SomeTools</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

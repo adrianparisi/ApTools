@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ApTools
+namespace SomeTools
 {
     public static class StringExtensions
     {
