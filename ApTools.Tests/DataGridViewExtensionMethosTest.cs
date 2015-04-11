@@ -1,5 +1,6 @@
 ﻿using ApTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Windows.Forms;
 
 namespace ApToolsTest
@@ -17,8 +18,8 @@ namespace ApToolsTest
             grid.Columns.Add("C2", "C2");
 
             grid.Rows.Add("Cero.1", "", 2.1);
-            grid.Rows.Add("", "", 2.2);
-            grid.Rows.Add("Cero.3", "", null);
+            grid.Rows.Add("", "", null);
+            grid.Rows.Add(new DateTime(), "", DateTime.Now);
 
             foreach (DataGridViewColumn column in grid.Columns)
                 column.Visible = true;
@@ -44,6 +45,24 @@ namespace ApToolsTest
 
             Assert.IsTrue(grid.Columns[0].Visible, "Column 0 is not visible");
             Assert.IsTrue(grid.Columns[2].Visible, "Column 2 is not visible");
+        }
+
+        [TestMethod]
+        public void CheckDefaultDateTimeTest()
+        {
+            DataGridView grid = FakeDataGridView();
+            DataGridViewCell cell = grid.Rows[2].Cells[0];
+
+            Assert.IsTrue(cell.IsDefaultDate());
+        }
+
+        [TestMethod]
+        public void CheckIsNotDefaultDateTimeTest()
+        {
+            DataGridView grid = FakeDataGridView();
+            DataGridViewCell cell = grid.Rows[2].Cells[2];
+
+            Assert.IsFalse(cell.IsDefaultDate());
         }
     }
 }
