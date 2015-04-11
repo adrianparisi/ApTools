@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Windows.Forms;
 
-namespace ApToolsTest
+namespace SomeTools.Tests
 {
     [TestClass]
     public class DataGridViewExtensionMethosTest

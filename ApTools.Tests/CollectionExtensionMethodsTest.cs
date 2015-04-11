@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
-namespace ApToolsTest
+namespace SomeTools.Tests
 {
     [TestClass]
     public class CollectionExtensionMethodsTest

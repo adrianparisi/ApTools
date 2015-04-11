@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace ApToolsTest
+namespace SomeTools.Tests
 {
     [TestClass]
     public class ReflectionHelperTesT
