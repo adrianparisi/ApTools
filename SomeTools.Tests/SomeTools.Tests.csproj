@@ -62,7 +62,7 @@
     <Compile Include="StringExtensionsTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ApTools\SomeTools.csproj">
+    <ProjectReference Include="..\SomeTools\SomeTools.csproj">
       <Project>{be4c2b47-634a-481b-a513-0647f1135b8c}</Project>
       <Name>SomeTools</Name>
     </ProjectReference>
