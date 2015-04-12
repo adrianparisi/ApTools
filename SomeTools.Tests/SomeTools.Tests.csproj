@@ -39,6 +39,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <Choose>
@@ -54,19 +55,34 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="CollectionExtensionMethodsTest.cs" />
-    <Compile Include="DataGridViewExtensionMethosTest.cs" />
+    <Compile Include="ExtensionMethods\CollectionExtensionMethodsTest.cs" />
+    <Compile Include="ExtensionMethods\DataGridViewExtensionMethosTest.cs" />
     <Compile Include="ExceptionLoggerTest.cs" />
-    <Compile Include="NullableIntExtensionsTest.cs" />
-    <Compile Include="ReflectionHelperTesT.cs" />
+    <Compile Include="ExtensionMethods\ImageExtensionsTest.cs" />
+    <Compile Include="ExtensionMethods\NullableIntExtensionsTest.cs" />
+    <Compile Include="ReflectionHelperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StringExtensionsTest.cs" />
+    <Compile Include="ExtensionMethods\StringExtensionsTest.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SomeTools\SomeTools.csproj">
       <Project>{be4c2b47-634a-481b-a513-0647f1135b8c}</Project>
       <Name>SomeTools</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flag.png" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

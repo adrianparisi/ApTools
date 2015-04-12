@@ -2,7 +2,6 @@
 using System;
 using System.IO;
 using System.Linq;
-using System.Security.AccessControl;
 
 namespace SomeTools.Tests
 {
@@ -12,10 +11,10 @@ namespace SomeTools.Tests
         [TestInitialize]
         public void TestInitialize()
         {
-            this.RemoveExistingLog();
+            this.RemoveLog();
         }
 
-        private void RemoveExistingLog()
+        private void RemoveLog()
         {
             if (File.Exists(ExceptionLogger.FullName))
             {
@@ -37,9 +36,8 @@ namespace SomeTools.Tests
             Assert.IsTrue(log.Count() > 0);
         }
 
-
         [TestMethod]
-        public void AppendASecondException()
+        public void AppendASecondExceptionTest()
         {
             ExceptionLogger.Log(new Exception("messagge 1"));
             byte[] log1 = File.ReadAllBytes(ExceptionLogger.FullName);
@@ -53,9 +51,9 @@ namespace SomeTools.Tests
         }
 
         [TestMethod]
-        public void CantOpenFileAndNotFail()
+        public void CantOpenFileAndNotFailTest()
         {
-            ExceptionLogger.Log(new Exception("messagge"));
+            ExceptionLogger.Log(new Exception("some messagge"));
             byte[] log1 = File.ReadAllBytes(ExceptionLogger.FullName);
 
             File.SetAttributes(ExceptionLogger.FullName, FileAttributes.ReadOnly);
@@ -64,6 +62,20 @@ namespace SomeTools.Tests
             byte[] log2 = File.ReadAllBytes(ExceptionLogger.FullName);
 
             Assert.AreEqual(log1.Count(), log2.Count());
+        }
+
+        [TestMethod]
+        public void CreateFolderThenCreateLogTest()
+        {
+            if (Directory.Exists(ExceptionLogger.Path))
+                Directory.Delete(ExceptionLogger.Path);
+
+            Assert.IsFalse(Directory.Exists(ExceptionLogger.Path), "Could not delete the logs directory.");
+
+            ExceptionLogger.Log(new Exception("some messagge"));
+            byte[] log = File.ReadAllBytes(ExceptionLogger.FullName);
+
+            Assert.IsTrue(log.Count() > 0, "The log does not contains information.");
         }
     }
 }

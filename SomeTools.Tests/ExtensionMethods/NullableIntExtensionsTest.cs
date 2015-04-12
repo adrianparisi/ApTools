@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SomeTools.Tests
+namespace SomeTools.Tests.ExtensionMethods
 {
     [TestClass]
     public class NullableIntExtensionsTest

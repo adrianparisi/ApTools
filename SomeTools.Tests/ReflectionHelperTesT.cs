@@ -5,7 +5,7 @@ using System;
 namespace SomeTools.Tests
 {
     [TestClass]
-    public class ReflectionHelperTesT
+    public class ReflectionHelperTest
     {
         class MyClass
         {
