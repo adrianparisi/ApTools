@@ -46,7 +46,9 @@
     <Compile Include="ExtensionMethods\NullableIntExtensions.cs" />
     <Compile Include="ExtensionMethods\StringExtensions.cs" />
     <Compile Include="ExeptionLogger.cs" />
-    <Compile Include="MsCriptografo.cs" />
+    <Compile Include="MsCryptographer.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reflection\ReflectionHelper.cs" />
   </ItemGroup>

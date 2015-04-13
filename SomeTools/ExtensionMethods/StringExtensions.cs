@@ -11,5 +11,13 @@ namespace SomeTools
         {
             return text == null || text.Trim() == String.Empty;
         }
+
+        public static string Reverse(this string text)
+        {
+            char[] array = text.ToCharArray();
+            Array.Reverse(array);
+
+            return new String(array);
+        }
     }
 }
