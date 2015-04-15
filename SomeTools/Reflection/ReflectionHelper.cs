@@ -13,7 +13,6 @@ namespace SomeTools.Reflection
         {
             BindingFlags flags = BindingFlags.CreateInstance | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
 
-
             ConstructorInfo constructor = type.GetConstructor(flags, null, ReflectionHelper.GetTypes(parameters), null);
 
             if (constructor == null)
@@ -21,7 +20,6 @@ namespace SomeTools.Reflection
             
             return constructor.Invoke(parameters);
         }
-
 
         /// <summary>Runs the static method.</summary>
         /// <param name="name">The method name.</param>
@@ -32,7 +30,6 @@ namespace SomeTools.Reflection
             return ReflectionHelper.RunMethod(name, BindingFlags.Static, type, null, parameters);
         }
 
-
         /// <summary>Runs the instance method.</summary>
         /// <param name="name">The method name.</param>
         /// <param name="instance">The object instance.</param>
@@ -42,11 +39,9 @@ namespace SomeTools.Reflection
             return ReflectionHelper.RunMethod(name, BindingFlags.Instance, instance.GetType(), instance, parameters);
         }
 
-
         private static object RunMethod(string name, BindingFlags flags, Type type, object instance, object[] parameters)
         {
             flags = flags | BindingFlags.Public | BindingFlags.NonPublic;
-            
             
             MethodInfo method = type.GetMethod(name, flags, null, ReflectionHelper.GetTypes(parameters), null);
                         
@@ -55,7 +50,6 @@ namespace SomeTools.Reflection
 
             return method.Invoke(instance, parameters);
         }
-
         
         private static Type[] GetTypes(object[] parameters)
         {

@@ -1,41 +1,18 @@
-﻿using SomeTools.Reflection;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SomeTools.Reflection;
 using System;
 
-namespace SomeTools.Tests
+namespace SomeTools.Tests.Reflection
 {
     [TestClass]
     public class ReflectionHelperTest
     {
-        class MyClass
-        {
-            private MyClass() { }
-            private MyClass(int intiger) { }
-            public MyClass(string text) { }
-
-
-            private int MyMethod(bool boolean) 
-            {
-                return 1;
-            }
-
-            private int MyMethod(string text)
-            {
-                return 2;
-            }
-
-            private int MyMethod(bool boolean, string text)
-            {
-                return 3;
-            }
-        }
-
         #region Contructor
 
         [TestMethod]
         public void RunPrivateContructorWithoutParameterTest()
         {
-            MyClass myClass = (MyClass)ReflectionHelper.RunConstructor(typeof(MyClass));
+            MyFakeClass myClass = (MyFakeClass)ReflectionHelper.RunConstructor(typeof(MyFakeClass));
 
             Assert.IsNotNull(myClass);
         }
@@ -43,7 +20,7 @@ namespace SomeTools.Tests
         [TestMethod]
         public void RunPrivateContructorWithOneParameterTest()
         {
-            MyClass myClass = (MyClass)ReflectionHelper.RunConstructor(typeof(MyClass), 1);
+            MyFakeClass myClass = (MyFakeClass)ReflectionHelper.RunConstructor(typeof(MyFakeClass), 1);
 
             Assert.IsNotNull(myClass);
         }
@@ -52,7 +29,7 @@ namespace SomeTools.Tests
         [ExpectedException(typeof(ArgumentException))]
         public void RunPrivateContructorWithFailParameterTest()
         {
-            ReflectionHelper.RunConstructor(typeof(MyClass), 123.456);
+            ReflectionHelper.RunConstructor(typeof(MyFakeClass), 123.456);
         }
 
         #endregion Contructor
@@ -62,7 +39,7 @@ namespace SomeTools.Tests
         [TestMethod]
         public void RunPrivateMethodWith1BooleanParameterTesT()
         {
-            MyClass myClass = new MyClass("OK");
+            MyFakeClass myClass = new MyFakeClass("OK");
             
             int expected = 1;
             int actual = (int)ReflectionHelper.RunMethod("MyMethod", myClass, true);
@@ -71,10 +48,10 @@ namespace SomeTools.Tests
         }
 
         [TestMethod]
-        public void RunPrivateMethodWith1StringParameterTesT()
+        public void RunPrivateStaticMethodWith1StringParameterTesT()
         {
             int expected = 2;
-            int actual = (int)ReflectionHelper.RunMethod("MyMethod", typeof(MyClass), "OK");
+            int actual = (int)ReflectionHelper.RunMethod("MyMethod", typeof(MyFakeClass), "OK");
 
             Assert.AreEqual(expected, actual);
         }
@@ -82,7 +59,7 @@ namespace SomeTools.Tests
         [TestMethod]
         public void RunPrivateMethodWith2ParameterTesT()
         {
-            MyClass myClass = new MyClass("OK");            
+            MyFakeClass myClass = new MyFakeClass("OK");            
             
             int expected = 3;
             int actual = (int)ReflectionHelper.RunMethod("MyMethod", myClass, true, "OK");
@@ -94,7 +71,7 @@ namespace SomeTools.Tests
         [ExpectedException(typeof(ArgumentException))]
         public void RunPrivateMethodFailParameterTesT()
         {
-            MyClass myClass = new MyClass("OK");
+            MyFakeClass myClass = new MyFakeClass("OK");
 
             ReflectionHelper.RunMethod("MyMethod", myClass);
         }
