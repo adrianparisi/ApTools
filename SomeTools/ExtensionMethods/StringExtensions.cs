@@ -12,6 +12,9 @@ namespace SomeTools
             return text == null || text.Trim() == String.Empty;
         }
 
+        /// <summary>
+        /// Reverses the string.
+        /// </summary>
         public static string Reverse(this string text)
         {
             char[] array = text.ToCharArray();

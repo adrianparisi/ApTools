@@ -31,6 +31,9 @@ namespace SomeTools
             return true;
         }
 
+        /// <summary>
+        /// Determines whether the value of the cell is the default date.
+        /// </summary>
         public static bool IsDefaultDate(this DataGridViewCell cell)
         {
             DateTime date;

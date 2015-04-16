@@ -37,7 +37,7 @@ namespace SomeTools.Tests.Reflection
         #region Methods
 
         [TestMethod]
-        public void RunPrivateMethodWith1BooleanParameterTesT()
+        public void RunPrivateMethodWith1BooleanParameterTest()
         {
             MyFakeClass myClass = new MyFakeClass("OK");
             
@@ -48,7 +48,7 @@ namespace SomeTools.Tests.Reflection
         }
 
         [TestMethod]
-        public void RunPrivateStaticMethodWith1StringParameterTesT()
+        public void RunPrivateStaticMethodWith1StringParameterTest()
         {
             int expected = 2;
             int actual = (int)ReflectionHelper.RunMethod("MyMethod", typeof(MyFakeClass), "OK");
@@ -57,7 +57,7 @@ namespace SomeTools.Tests.Reflection
         }
 
         [TestMethod]
-        public void RunPrivateMethodWith2ParameterTesT()
+        public void RunPrivateMethodWith2ParameterTest()
         {
             MyFakeClass myClass = new MyFakeClass("OK");            
             

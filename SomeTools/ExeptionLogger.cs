@@ -4,13 +4,22 @@ using System.Windows.Forms;
 
 namespace SomeTools
 {
+    /// <summary>
+    /// Logger for save exceptions in a plain text file.
+    /// </summary>
     public class ExceptionLogger
     {
+        /// <summary>
+        /// Gets the path.
+        /// </summary>
         public static string Path
         {
             get { return Application.StartupPath + "\\logs"; }
         }
 
+        /// <summary>
+        /// Gets the name of the file.
+        /// </summary>
         public static string FileName
         {
             get { return "error.log"; }
