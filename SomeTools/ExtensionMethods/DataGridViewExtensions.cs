@@ -10,9 +10,13 @@ namespace SomeTools
         /// </summary>
         public static void HideEmptyColumns(this DataGridView grid)
         {
+            grid.SuspendLayout();
+
             foreach (DataGridViewColumn column in grid.Columns)
                 if (column.IsEmpty())
                     column.Visible = false;
+
+            grid.ResumeLayout();
         }
 
         /// <summary>
