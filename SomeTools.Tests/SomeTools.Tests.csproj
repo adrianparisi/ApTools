@@ -58,6 +58,7 @@
     <Compile Include="ExtensionMethods\CollectionExtensionMethodsTest.cs" />
     <Compile Include="ExtensionMethods\DataGridViewExtensionMethosTest.cs" />
     <Compile Include="ExceptionLoggerTest.cs" />
+    <Compile Include="ExtensionMethods\DateTimeExtensionsTest.cs" />
     <Compile Include="ExtensionMethods\ImageExtensionsTest.cs" />
     <Compile Include="ExtensionMethods\NullableIntExtensionsTest.cs" />
     <Compile Include="MsCryptographerTest.cs">

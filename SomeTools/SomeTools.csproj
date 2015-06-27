@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="ExtensionMethods\CollectionExtensions.cs" />
     <Compile Include="ExtensionMethods\DataGridViewExtensions.cs" />
+    <Compile Include="ExtensionMethods\DateTimeExtensions.cs" />
     <Compile Include="ExtensionMethods\ImageExtensions.cs" />
     <Compile Include="ExtensionMethods\NullableIntExtensions.cs" />
     <Compile Include="ExtensionMethods\StringExtensions.cs" />
