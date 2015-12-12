@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExtensionMethods\CollectionExtensions.cs" />
+    <Compile Include="ExtensionMethods\ComboBoxExtensions.cs" />
     <Compile Include="ExtensionMethods\DataGridViewExtensions.cs" />
     <Compile Include="ExtensionMethods\DateTimeExtensions.cs" />
     <Compile Include="ExtensionMethods\ImageExtensions.cs" />
