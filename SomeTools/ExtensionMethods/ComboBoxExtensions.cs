@@ -4,6 +4,9 @@ namespace SomeTools
 {
     public static class ComboBoxExtensions
     {
+        /// <summary>
+        /// Resize the width based on the largest item.
+        /// </summary>
         public static void AutoSize(this ComboBox comboBox)
         {
             int current;
@@ -20,7 +23,7 @@ namespace SomeTools
             int width = maximum + SystemInformation.VerticalScrollBarWidth;
 
             if (comboBox.Width != width)
-            { 
+            {
                 comboBox.Width = width;
                 comboBox.Refresh();
             }
