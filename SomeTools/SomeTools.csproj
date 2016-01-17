@@ -43,9 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExtensionMethods\CollectionExtensions.cs" />
-    <Compile Include="ExtensionMethods\ComboBoxExtensions.cs" />
-    <Compile Include="ExtensionMethods\ControlExtensions.cs" />
-    <Compile Include="ExtensionMethods\DataGridViewExtensions.cs" />
+    <Compile Include="WinFormUtils\ComboBoxExtensions.cs" />
+    <Compile Include="WinFormUtils\ControlExtensions.cs" />
+    <Compile Include="WinFormUtils\DataGridViewExtensions.cs" />
     <Compile Include="ExtensionMethods\DateTimeExtensions.cs" />
     <Compile Include="ExtensionMethods\ImageExtensions.cs" />
     <Compile Include="ExtensionMethods\NullableIntExtensions.cs" />

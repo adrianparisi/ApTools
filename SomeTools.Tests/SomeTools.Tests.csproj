@@ -56,8 +56,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ExtensionMethods\CollectionExtensionMethodsTest.cs" />
-    <Compile Include="ExtensionMethods\ComboBoxExtensionMethodsTest.cs" />
-    <Compile Include="ExtensionMethods\DataGridViewExtensionMethosTest.cs" />
+    <Compile Include="WinFormUtils\ComboBoxExtensionMethodsTest.cs" />
+    <Compile Include="WinFormUtils\DataGridViewExtensionMethosTest.cs" />
     <Compile Include="ExceptionLoggerTest.cs" />
     <Compile Include="ExtensionMethods\DateTimeExtensionsTest.cs" />
     <Compile Include="ExtensionMethods\ImageExtensionsTest.cs" />
