@@ -12,9 +12,9 @@ namespace SomeTools
             int current;
             int maximum = 0;
 
-            foreach (object text in comboBox.Items)
+            foreach (var item in comboBox.Items)
             {
-                current = TextRenderer.MeasureText(text.ToString(), comboBox.Font).Width;
+                current = TextRenderer.MeasureText(comboBox.GetItemText(item), comboBox.Font).Width;
 
                 if (current > maximum)
                     maximum = current;
