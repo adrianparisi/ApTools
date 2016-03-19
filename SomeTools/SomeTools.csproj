@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExtensionMethods\CollectionExtensions.cs" />
+    <Compile Include="ExtensionMethods\SizeExtensions.cs" />
     <Compile Include="WinFormUtils\ComboBoxExtensions.cs" />
     <Compile Include="WinFormUtils\ControlExtensions.cs" />
     <Compile Include="WinFormUtils\DataGridViewExtensions.cs" />
