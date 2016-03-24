@@ -1,3 +1,15 @@
+version: 1.0.{build}
+
+build:
+  verbosity: minimal
+
+test:
+  assemblies: '**\bin\Debug\SomeTools.Tests.dll'
+
+artifacts:
+- path: '**\bin\Debug\*'
+  name: Files
+
 deploy:
   provider: NuGet
   api_key:
