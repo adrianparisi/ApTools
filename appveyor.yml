@@ -4,11 +4,13 @@ build:
   verbosity: minimal
 
 test:
-  assemblies: '**\bin\Debug\SomeTools.Tests.dll'
+  assemblies: 'SomeTools\bin\Debug\SomeTools.Tests.dll'
 
 artifacts:
-- path: '**\bin\Debug\*'
+- path: 'SomeTools\bin\Debug\*'
   name: Files
+- path: '*.nupkg'
+  name: Package
 
 deploy:
   provider: NuGet
