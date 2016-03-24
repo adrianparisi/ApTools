@@ -1,5 +1,11 @@
 version: 1.0.{build}
 
+assembly_info:
+  patch: true
+  file: SomeTools\Properties\AssemblyInfo.cs
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+
 build:
   publish_nuget: true
   verbosity: minimal
