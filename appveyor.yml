@@ -4,12 +4,12 @@ build:
   verbosity: minimal
 
 test:
-  assemblies: 'SomeTools\bin\Debug\SomeTools.Tests.dll'
+  assemblies: 'SomeTools.Tests\bin\Debug\SomeTools.Tests.dll'
 
 artifacts:
 - path: 'SomeTools\bin\Debug\*'
   name: Files
-- path: '*.nupkg'
+- path: '**\*.nupkg'
   name: Package
 
 deploy:
@@ -17,3 +17,5 @@ deploy:
   api_key:
     secure: 3JSVyqTNWRcvMXqrpmKghpgoRKTFmU0hKV2vuGQ+sK+rUawCCpMh7Ykd2PpzH9uc
   artifact: /.*\.nupkg/
+  on:
+    branch: master
